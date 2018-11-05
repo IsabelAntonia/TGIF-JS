@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senate Attendance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/mystyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="row align-items-center">
+                <div class="col-9">
+                    <img class="img-fluid" src="assets/Logo.png" alt="logo">
+                </div>
+                <div class="col-1">
+                    <img class="img-fluid" src="assets/email-logo-png-transparent-background-5.png" alt="logo">
+                </div>
+                <div class="col-2">
+                    <h4><a href="mailto:info@tgif.net" target="_blank">info@tgif.net</a></h4>
+                </div>
+
+            </div>
+
+
+
+        </header>
+        <nav class="navMargin">
+
+            <ul class=" row nav nav-tabs border border border-dark bg-light">
+                <li class="nav-item border border-dark">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown border border-dark">
+                    <a class="nav-link dropdown-toggle border" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Congress 113</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="senate-data.html">Senate</a>
+                        <a class="dropdown-item" href="house-data.html">House</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown border border-dark">
+                    <a class="nav-link dropdown-toggle border" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Attendance</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="senate-attendance.html">Senate</a>
+                        <a class="dropdown-item" href="house-attendance.html">House</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown border border-dark">
+                    <a class="nav-link dropdown-toggle border" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="senate-loyalty.html">Senate</a>
+                        <a class="dropdown-item" href="house-loyalty.html">House</a>
+                    </div>
+                </li>
+            </ul>
+
+
+        </nav>
+
+
+        <!--Table container-->
+
+        <div>
+            <h2>Attendance</h2>
+            <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+
+            <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+
+            <h3>Senate at a glance</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Party</th>
+                        <th>Total number</th>
+                        <th>Voted with party</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Republican</td>
+                        <td id="Rep"></td>
+                        <td id="Rep1"></td>
+                    </tr>
+                    <tr>
+                        <td>Democrat</td>
+                        <td id="Dem"></td>
+                        <td id="Dem1"></td>
+                    </tr>
+                    <tr>
+                        <td>Independent</td>
+                        <td id="Ind"></td>
+                        <td id="Ind1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Least Engaged (Bottom 10% Attendance)</h3>
+            <table class=" table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Missed Votes</th>
+                        <th>% Missed</th>
+                    </tr>
+                </thead>
+                <tbody id="leastTable">
+
+                </tbody>
+            </table>
+
+            <h3>Most Engaged (Top 10% Attendance)</h3>
+            <table class=" table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Number of Missed Votes</th>
+                        <th>% Missed</th>
+                    </tr>
+                </thead>
+                <tbody id="mostTable">
+                </tbody>
+            </table>
+
+        </div>
+
+        <footer>
+            <div class="border border-dark bg-light row justify-content-center">
+                <b>© 2016 TGIF / All Rights Reserved</b>
+            </div>
+        </footer>
+
+
+
+
+        <!--    	<script src="congress-113-senate.js"></script>-->
+        <script src="scripts/plainjs_statistics.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </div>
+</body>
+</html>
