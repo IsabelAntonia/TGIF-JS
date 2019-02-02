@@ -12,74 +12,82 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
+        <header class="row">
 
-        <header>
-            <div class="row align-items-center">
-                <div class="col-9">
-                    <img class="img-fluid" src="assets/Logo.png" alt="logo">
-                </div>
-                <div class="col-1">
-                    <img class="img-fluid" src="assets/email-logo-png-transparent-background-5.png" alt="logo">
-                </div>
-                <div class="col-2">
-                    <h4><a href="mailto:info@tgif.net" target="_blank">info@tgif.net</a></h4>
-                </div>
 
+            <div class="col-xs-12 col-md-6 d-flex justify-content-center justify-content-md-start">
+                <img class="img-fluid" src="assets/Logo.png" alt="logo">
             </div>
 
-
+            <div class="col-xs-12 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
+                <img class="img-fluid mr-2" id="emailLogo" src="assets/email-logo-png-transparent-background-5.png" alt="search_logo">
+                <h4><a href="mailto:info@tgif.net" target="_blank">info@tgif.net</a></h4>
+            </div>
 
         </header>
-        <nav class="navMargin">
-
-            <ul class=" row nav nav-tabs border border border-dark bg-light">
-                <li class="nav-item border border-dark">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown border border-dark">
-                    <a class="nav-link dropdown-toggle border" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Congress 113</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="senate-data.html">Senate</a>
-                        <a class="dropdown-item" href="house-data.html">House</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown border border-dark">
-                    <a class="nav-link dropdown-toggle border" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Attendance</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="senate-attendance.html">Senate</a>
-                        <a class="dropdown-item" href="house-attendance.html">House</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown border border-dark">
-                    <a class="nav-link dropdown-toggle border" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Party Loyalty</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="senate-loyalty.html">Senate</a>
-                        <a class="dropdown-item" href="house-loyalty.html">House</a>
-                    </div>
-                </li>
-            </ul>
 
 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mt-4 p-0" id="thisNav">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Congress 113
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="senate-data.html">Senate</a>
+                            <a class="dropdown-item" href="house-data.html">House</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Attendance
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="senate-attendance.html">Senate</a>
+                            <a class="dropdown-item" href="house-attendance.html">House</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Loyalty 
+        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="senate-loyalty.html">Senate</a>
+                            <a class="dropdown-item" href="house-loyalty.html">House</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
         </nav>
-
-
-
-
-        <!--Table container-->
-        <h2>Senators</h2>
+        <h3>Senators</h3>
         <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
 
 
-
-        Filter by party: <input type="checkbox" name="party" value="R" id="partyR">Republican
-        <input type="checkbox" name="party" value="D" id="partyD">Democrat
-        <input type="checkbox" name="party" value="I" id="partyI">Independant Filter by State: <select name="state" id="stateId">
-           <option value="ALL">ALL</option>
-           
+    <div class="mb-2 mt-4"><span class="mr-4">Filter by party:</span><input type="checkbox" name="party" value="R" id="partyR"><span class="ml-2 mr-4">Republican</span>
+        <input type="checkbox" name="party" value="D" id="partyD"> <span class="ml-2 mr-4">Democrat</span>
+        <input type="checkbox" name="party" value="I" id="partyI"><span class="ml-2 mr-4">Independant</span>Filter by State:
+          <select class="ml-2" name="state" id="stateId">
+           <option  value="ALL">ALL</option>
+           </select>
             
-            
-        </select>
+           </div>
 
 
 
@@ -101,24 +109,25 @@
                 </tbody>
             </table>
         </div>
-        <footer>
-            <div class="border border-dark bg-light row justify-content-center">
-                <b>© 2016 TGIF / All Rights Reserved</b>
-            </div>
-        </footer>
-
-        <!--        <script src="congress-113-senate.js"></script>-->
-        <script src="scripts/plainjs_bigtables.js"></script>
-
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
 
     </div>
+    <footer class="fixed-bottom">
+        <div class="border border-dark bg-light row justify-content-center">
+            <b>© 2016 TGIF / All Rights Reserved</b>
+        </div>
+    </footer>
+
+    <script src="scripts/plainjs_bigtables.js"></script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
 
 </body>
 

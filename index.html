@@ -89,7 +89,7 @@
             <div>Openness, accountability, and honesty define government transparency. In a free society, transparency is government's obligation to share information with citizens. It is at the heart of how citizens hold their public officials accountable. Here at TGIF we believe that government should be transparent. Governments exist to serve the people. Information on how officials conduct the public business and spend taxpayer money must be readily available and easily understood. This transparency allows good and just governance. Transparency promotes accountability and provides information for citizens about what their Government is doing. We also believe that government should be participatory. Public engagement enhances the Government's effectiveness and improves the quality of its decisions. Knowledge is widely dispersed in society, and public officials benefit from having access to that dispersed knowledge. We invite you to use our site to become actively engaged in American government. TGIF works to disclose information in forms that the public can readily find and use. We solicit public feedback to identify information of greatest use to the public.
                 <span id="dots">...</span>
                     
-                    <div id="more"><p><h2>Hello</h2>In the West, the idea that government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere.
+                    <div id="more" style="display: none"><p><h3>Background History of Government Transparency</h3>In the West, the idea that government should be open to public scrutiny and susceptible to public opinion dates back at least to the time of the Enlightenment, when many philosophes made an attack on absolutist doctrine of state secrecy, a core part of their intellectual project. The passage of formal legislative instruments to this end can also be traced to this time with Sweden, for example, (which then included Finland as a Swedish-governed territory) enacting free press legislation as part of its constitution (Freedom of the Press Act, 1766). This approach, and that of the philosophes more broadly, is strongly related to recent historiography on the eighteenth-century public sphere.
 
                     Influenced by Enlightenment thought, the revolutions in America (1776) and France (1789), freedom of the press enshrined provisions and requirements for public budgetary accounting and freedom of the press in constitutional articles. In the nineteenth century, attempts by Metternichean statesmen to row back on these measures were vigorously opposed by a number of eminent liberal politicians and writers, Bentham, Mill and Acton prominent among the latter.
 
@@ -102,14 +102,9 @@
                     
                     </div>
 
-            <button onclick="myFunction()" id="myBtn">Read more</button>
+            <button class="mt-4" onclick="myFunction()" id="myBtn">Read more</button>
 
 
-
-            <!--
-                <h3>Background History of Government Transparency</h3>
-        
--->
 
 
 
@@ -121,19 +116,42 @@
         </div>
     </footer>
     <script>
-        function myFunction() {
-            var dots = document.getElementById("dots");
+//        function myFunction() {
+//            var dots = document.getElementById("dots");
+//            var moreText = document.getElementById("more");
+//            var btnText = document.getElementById("myBtn");
+//
+//            if (dots.style.display === "none") {
+//                dots.style.display = "inline";
+//                btnText.innerHTML = "Read more";
+//                moreText.style.display = "none";
+//            } else {
+//                dots.style.display = "none";
+//                btnText.innerHTML = "Read less";
+//                moreText.style.display = "block";
+//            }
+//        }
+        
+        
+               function myFunction() {
+
             var moreText = document.getElementById("more");
             var btnText = document.getElementById("myBtn");
+                   console.log(more.style.display)
+                   console.log(moreText.style.display === "none")
+                   
+                   
 
-            if (dots.style.display === "none") {
-                dots.style.display = "inline";
+            if (moreText.style.display === "none") {
+                 btnText.innerHTML = "Read less";
+                moreText.style.display = "block";
+                
+                
+                
+            } else {
                 btnText.innerHTML = "Read more";
                 moreText.style.display = "none";
-            } else {
-                dots.style.display = "none";
-                btnText.innerHTML = "Read less";
-                moreText.style.display = "block";
+               
             }
         }
 
