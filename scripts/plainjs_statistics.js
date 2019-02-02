@@ -67,14 +67,14 @@ function main(data) {
 
 
 
-    //Function Declaration
+
 
     function calculateStatistics() {
         for (var i = 0; i < members.length; i++) {
 
             let everyMember = data.results[0].members[i];
 
-            console.log(typeof (everyMember));
+//            console.log(typeof (everyMember));
 
             switch (everyMember.party) {
                 case "R":
@@ -176,7 +176,7 @@ function main(data) {
         // take only 10% from sortedArray now we know how many are 10%
         var checkedPrecent = sortedArray.length / 10;
 
-        checkedPrecent = checkedPrecent.toFixed(0);
+        checkedPrecent = checkedPrecent.toFixed(0); // in checkedPrecent we save the number that is 10%
 
 
 

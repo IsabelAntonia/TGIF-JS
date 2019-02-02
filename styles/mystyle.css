@@ -1,13 +1,4 @@
-/*
-.my-column-width {
-    width: 250px;
-}*/
 
-/*
-.image-fluid{
-    max-width: 30%;
-    height: auto; 
-}*/
 
 .navMargin {
     margin-bottom: 30px; 
@@ -94,4 +85,30 @@
   50% {
     transform: scale(1.5);
   }
+}
+
+#emailLogo{
+    
+    height: 5vh;
+    width: auto;
+    
+}
+
+#thisNav{
+margin-bottom: 40px;
+    font-size: 20px;
+   
+    }
+
+.container-fluid{
+    padding: 40px;
+}
+
+h3 {
+    margin-bottom: 2vh;
+    margin-top: 10vh;
+}
+
+#more {
+    display: none;
 }
