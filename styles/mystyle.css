@@ -109,6 +109,13 @@ h3 {
     margin-top: 5vh;
 }
 
+#noResults{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
 /*
 #more {
     display: none;
