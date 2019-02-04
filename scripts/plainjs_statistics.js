@@ -38,9 +38,11 @@ function main(data) {
         "numR": 0,
         "numD": 0,
         "numI": 0,
+        'numTotal': 0,
         "votedWithPartyR": 0,
         "votedWithPartyD": 0,
         "votedWithPartyI": 0,
+        "votedWithPartyTotal": 0,
         "leastEngaged": [],
         "mostEngaged": [],
         "bestLoyal": [],
@@ -71,6 +73,8 @@ function main(data) {
 
     function calculateStatistics() {
         for (var i = 0; i < members.length; i++) {
+            
+            statistics.numTotal++;
 
             let everyMember = data.results[0].members[i];
 
@@ -93,10 +97,14 @@ function main(data) {
         var Reps = [];
         var Dems = [];
         var Inds = [];
+        var Total = [];
         for (var i = 0; i < members.length; i++) {
+            
+                        let everyMember = data.results[0].members[i];
 
-            let everyMember = data.results[0].members[i];
-
+            
+            Total.push(everyMember.votes_with_party_pct);
+            
 
             switch (everyMember.party) {
                 case "R":
@@ -113,10 +121,9 @@ function main(data) {
 
         }
 
-        //    console.log(statistics.numR)
-        //    console.log(addElements(Reps)/statistics.numR);
         statistics.votedWithPartyR = Math.round(addElements(Reps) / statistics.numR);
         statistics.votedWithPartyD = Math.round(addElements(Dems) / statistics.numD);
+        statistics.votedWithPartyTotal = Math.round(addElements(Total) / statistics.numTotal);
 
         if (statistics.numI == 0) {
             statistics.votedWithPartyI = 0;
@@ -140,25 +147,25 @@ function main(data) {
         document.getElementById('Rep').innerHTML = statistics.numR;
         document.getElementById('Dem').innerHTML = statistics.numD;
         document.getElementById('Ind').innerHTML = statistics.numI;
+        document.getElementById('Total').innerHTML = statistics.numTotal;
         document.getElementById('Rep1').innerHTML = statistics.votedWithPartyR + "%";
         document.getElementById('Dem1').innerHTML = statistics.votedWithPartyD + "%";
         document.getElementById('Ind1').innerHTML = statistics.votedWithPartyI + "%";
-
-
-        //
-        //    var leastTable = document.getElementById('leastTable');
-        //    buildSmallTable(statistics.leastEngaged, leastTable);
-        //
-        //    var mostTable = document.getElementById("mostTable");
-        //    buildSmallTable(statistics.mostEngaged, mostTable);
-        //    
-        //    var worstTable = document.getElementById("worstTable");
-        //    buildSmallTable(statistics.worstLoyal, worstTable);
-        //    
-        //    var bestTable = document.getElementById("bestTable");
-        //    buildSmallTable(statistics.mostLoyal, bestTable); 
+        document.getElementById('Total1').innerHTML = statistics.votedWithPartyTotal + "%";
 
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     function engaged(direction) {
 
@@ -184,7 +191,7 @@ function main(data) {
 
         var tenPrcArray = [];
         for (i = 0; i < checkedPrecent; i++) {
-            tenPrcArray.push(members[i]);
+            tenPrcArray.push(sortedArray[i]);
         }
 
         if (direction == "least") {
