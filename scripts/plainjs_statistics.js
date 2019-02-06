@@ -193,6 +193,8 @@ function main(data) {
         for (i = 0; i < checkedPrecent; i++) {
             tenPrcArray.push(sortedArray[i]);
         }
+        
+        
 
         if (direction == "least") {
             statistics.leastEngaged = tenPrcArray;
