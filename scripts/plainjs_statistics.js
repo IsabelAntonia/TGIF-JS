@@ -260,6 +260,8 @@ function main(data) {
             for (var k = 0; k < smallArray.length; k++) {
                 var link = "<a href='" + smallArray[k].url + "'>" + smallArray[k].first_name + " " + smallArray[k].last_name + "</a>";
                 var numberPartyVotes = ((smallArray[k].total_votes - smallArray[k].missed_votes) * smallArray[k].votes_with_party_pct) / 100;
+                
+//                console.log(Math.round(numberPartyVotes));
                 var newRow = document.createElement("tr");
                 newRow.insertCell().innerHTML = link;
                 newRow.insertCell().innerHTML = Math.round(numberPartyVotes);
