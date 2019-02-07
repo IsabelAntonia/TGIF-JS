@@ -73,12 +73,12 @@ function main(data) {
 
     function calculateStatistics() {
         for (var i = 0; i < members.length; i++) {
-            
+
             statistics.numTotal++;
 
             let everyMember = data.results[0].members[i];
 
-//            console.log(typeof (everyMember));
+            //            console.log(typeof (everyMember));
 
             switch (everyMember.party) {
                 case "R":
@@ -99,12 +99,12 @@ function main(data) {
         var Inds = [];
         var Total = [];
         for (var i = 0; i < members.length; i++) {
-            
-                        let everyMember = data.results[0].members[i];
 
-            
+            let everyMember = data.results[0].members[i];
+
+
             Total.push(everyMember.votes_with_party_pct);
-            
+
 
             switch (everyMember.party) {
                 case "R":
@@ -154,18 +154,14 @@ function main(data) {
         document.getElementById('Total1').innerHTML = statistics.votedWithPartyTotal + "%";
 
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
 
     function engaged(direction) {
 
@@ -193,8 +189,8 @@ function main(data) {
         for (i = 0; i < checkedPrecent; i++) {
             tenPrcArray.push(sortedArray[i]);
         }
-        
-        
+
+
 
         if (direction == "least") {
             statistics.leastEngaged = tenPrcArray;
@@ -260,8 +256,8 @@ function main(data) {
             for (var k = 0; k < smallArray.length; k++) {
                 var link = "<a href='" + smallArray[k].url + "'>" + smallArray[k].first_name + " " + smallArray[k].last_name + "</a>";
                 var numberPartyVotes = ((smallArray[k].total_votes - smallArray[k].missed_votes) * smallArray[k].votes_with_party_pct) / 100;
-                
-//                console.log(Math.round(numberPartyVotes));
+
+                //                console.log(Math.round(numberPartyVotes));
                 var newRow = document.createElement("tr");
                 newRow.insertCell().innerHTML = link;
                 newRow.insertCell().innerHTML = Math.round(numberPartyVotes);
